@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>{{.title}}</h3>
+    <h3>{{.name}}</h3>
+    <br>
+    {{$t := .title}}
+    <h3>t:{{$t}}</h3>
+    <br>
+    {{if gt .sco 60}}
+    <p>及格</p>
+    {{else}}
+    <p>不及格</p>
+    {{end}}
+    <br>
+    {{range $k,$v := .sz}}
+    <p>{{$k}}----{{$v}}</p>
+    {{end}}
+</body>
+</html>
